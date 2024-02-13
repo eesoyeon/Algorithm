@@ -1,11 +1,9 @@
 def solution(arr1, arr2):
     answer = []
-    a = len(arr1) 
-    b = len(arr1[0]) 
     
-    for i in range(a):
+    for i in range(len(arr1)):
         tmp = []
-        for j in range(b):
+        for j in range(len(arr1[0]) ):
             tmp.append(arr1[i][j] + arr2[i][j])
     
         answer.append(tmp)
