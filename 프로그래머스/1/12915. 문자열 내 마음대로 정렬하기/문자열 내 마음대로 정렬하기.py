@@ -1,6 +1,6 @@
 def solution(strings, n):
     answer = []
-    strings.sort()
+    # strings.sort()
     
     for string in strings:
         answer.append(string[n]+string)
