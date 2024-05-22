@@ -1,2 +1,8 @@
 def solution(n):
-    return int(''.join(sorted(str(n), reverse=True)))
+    answer = []
+    for i in str(n):
+        answer.append(i)
+    
+    answer.sort(reverse=True)
+    
+    return int(''.join(answer))
