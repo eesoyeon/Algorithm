@@ -1,9 +1,7 @@
 def solution(absolutes, signs):
-    sum_val = 0
-    for a, b in zip(absolutes, signs):
-        if b==True:
-            sum_val += a
-        else:
-            sum_val -= a
-    return sum_val
+    for i in range(len(absolutes)):
+        if signs[i] == False:
+            absolutes[i] = -absolutes[i]
+
+    return sum(absolutes)
 
