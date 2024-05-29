@@ -1,12 +1,11 @@
 def solution(arr1, arr2):
+    sum_val = 0
     answer = []
-    
-    for i in range(len(arr1)):
+    for X, Y in zip(arr1, arr2):
         tmp = []
-        for j in range(len(arr1[0]) ):
-            tmp.append(arr1[i][j] + arr2[i][j])
-    
+        for x, y in zip(X, Y):
+            sum_val = x + y
+            tmp.append(sum_val)
         answer.append(tmp)
-        
-    return answer
     
+    return answer
