@@ -1,10 +1,11 @@
 def solution(price, money, count):
-    lst = [price*i for i in range(1, count+1)]
+    sum_val = 0
+    for i in range(1, count+1):
+        sum_val += i
     
-    answer = sum(lst) - money
-    
-    if answer > 0:
-        return answer
+    p = price*sum_val
+    if p > money:
+        return (p - money)
     else:
         return 0
     
