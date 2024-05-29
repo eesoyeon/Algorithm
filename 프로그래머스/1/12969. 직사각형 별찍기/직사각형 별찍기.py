@@ -1,6 +1,7 @@
 n, m = map(int, input().split())
 
-for _ in range(m):
-    for _ in range(n):
-        print("*", end="")
+for i in range(m):
+    for j in range(n):
+        print('*', end="")
     print()
+        
