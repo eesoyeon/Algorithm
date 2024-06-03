@@ -1,11 +1,10 @@
 function solution(array) {
-    var answer = 0;
-    for(let num of array){
-        let n = num.toString()
-        for(let i of n){
-            if(i==='7') answer++;
-        }
+    var answer = 0
+    var arr = array.join().split("")
+    
+    for(elem of arr){
+        if(elem==='7') answer++;
     }
-
-    return answer;
+    
+    return answer
 }
