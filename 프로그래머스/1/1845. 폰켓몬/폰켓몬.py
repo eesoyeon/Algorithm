@@ -1,14 +1,13 @@
-from itertools import combinations
-
 def solution(nums):
     answer = 0
     
-    n = len(nums)//2
-    set_nums = set(nums)
+    get = len(nums) / 2
     
-    if n <= len(set_nums):
-        answer = n
+    nums = set(nums)
+    
+    if len(nums) <= get:
+        answer = len(nums)
     else:
-        answer = len(set_nums)
-
+        answer = get
+    
     return answer
