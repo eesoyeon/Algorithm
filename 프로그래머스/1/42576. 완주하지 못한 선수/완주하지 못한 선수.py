@@ -1,19 +1,9 @@
 def solution(participant, completion):
-    answer = ''
-    participant_count = {}
+    participant.sort()
+    completion.sort()
+           
+    for i in range(len(completion)):
+        if participant[i] != completion[i]:
+            return participant[i]
     
-    for p in participant:
-        if p in participant_count:
-            participant_count[p] += 1
-        else:
-            participant_count[p] = 1
-    
-    for c in completion:
-        participant_count[c] -= 1
-    
-    for p, count in participant_count.items():
-        if count > 0:
-            answer = p
-            break
-    
-    return answer
+    return participant[-1]
