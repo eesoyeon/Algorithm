@@ -1,11 +1,14 @@
 def solution(phone_book):
-    answer = True
+    dic = {}
     
-    # dic = {}
-    phone_book.sort()
+    for number in phone_book:
+        dic[number] = True
+        
+    for number in phone_book:
+        prefix = ""
+        for char in number:
+            prefix += char
+            if prefix in dic and prefix!=number:
+                return False
     
-    for i in range(len(phone_book)-1):
-        if phone_book[i] == phone_book[i+1][:len(phone_book[i])]:
-            return False
-    
-    return answer
+    return True
