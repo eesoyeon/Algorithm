@@ -9,16 +9,9 @@ def lcm(a, b):
 
 
 def solution(arr):
-    answer = 0
+    answer = arr[0]
     
-    if len(arr) == 1:
-        return arr[0]
-    elif len(arr) == 2:
-        return lcm(arr[0], arr[1])
-    
-    answer = lcm(arr[0], arr[1])
-    
-    for i in range(2, len(arr)):
+    for i in range(1, len(arr)):
         answer = lcm(answer, arr[i])
     
     return answer
