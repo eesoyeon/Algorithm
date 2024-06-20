@@ -1,8 +1,5 @@
 def solution(sizes):
-    for lst in sizes:
-        lst.sort()
-        
-    max_w = max(x[0] for x in sizes)
-    max_h = max(x[1] for x in sizes)
+    max_width = max(max(x) for x in sizes)  # 가로 길이의 최대값
+    max_height = max(min(x) for x in sizes)  # 세로 길이의 최대값
     
-    return max_w*max_h
+    return max_width * max_height
