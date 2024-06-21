@@ -1,10 +1,10 @@
 # [level 2] 카펫 - 42842 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/42842) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/42842?language=javascript) 
 
 ### 성능 요약
 
-메모리: 10.2 MB, 시간: 0.02 ms
+메모리: 33.4 MB, 시간: 0.07 ms
 
 ### 구분
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2024년 03월 22일 14:45:28
+2024년 06월 21일 19:31:01
 
 ### 문제 설명
 
