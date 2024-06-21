@@ -1,8 +1,8 @@
 function solution(s) {
     var answer = [];
     
-    var last = {};
-    for(let i=0; i<s.length; i++){
+    let last = {};
+    for(i=0; i<s.length; i++){
         let char = s[i];
         
         if(last[char] === undefined) answer.push(-1);
