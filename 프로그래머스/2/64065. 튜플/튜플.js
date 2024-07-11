@@ -1,13 +1,9 @@
 function solution(s) {
-    let arr = s.substring(1, s.length-2).split('},').map(arr => arr.substring(1).split(',').map(v => Number(v)));
+    const tuples = (str) => s.slice(2, -2).split('},{').map(v => toNumbers(v)).sort(sortArr).reduce((acc, cur) => [...acc, ...cur.filter((v) => !acc.includes(v))], []);
     
-    arr.sort((a,b)=>a.length-b.length);
+    const toNumbers = (str) => str.split(',').map(v => Number(v));
     
-    const answer = arr.reduce((acc, cur) => {
-        const value = cur.find(v  => !acc.includes(v));
-        acc.push(value);
-        return acc;
-    }, [])
+    const sortArr = (a, b) => a.length - b.length;
     
-    return answer;
+    return tuples(s);
 }
