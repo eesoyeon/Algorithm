@@ -1,9 +1,13 @@
 def solution(participant, completion):
-    participant.sort()
-    completion.sort()
-           
-    for i in range(len(completion)):
-        if participant[i] != completion[i]:
-            return participant[i]
+    answer = ''
+    temp = 0
+    dic = {}
     
-    return participant[-1]
+    for part in participant:
+        dic[hash(part)] = part
+        temp += hash(part)
+    for com in completion:
+        temp -= hash(com)
+    answer = dic[temp]
+        
+    return answer
