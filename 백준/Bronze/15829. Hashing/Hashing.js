@@ -6,20 +6,16 @@ const L = parseInt(input[0]);
 let str = input[1];
 
 const alphabet = 'abcdefghijklmnopqrstuvwxyz';
-const r = 31;
+let r = 1;
 const M = 1234567891;
-let i = 0;
 
 let hash = 0;
-for (let j = 0; j < L; j++) {
-    let a = alphabet.indexOf(str[j]) + 1;
+for (let i = 0; i < L; i++) {
+    let a = alphabet.indexOf(str[i]) + 1;
 
-    hash += a * r ** i;
-    i += 1;
+    hash += a * r;
+    r *= 31;
+    r %= M;
 }
 
-if (hash.toString().length > 16) {
-    hash = parseInt(hash / M);
-}
-
-console.log(hash);
+console.log(hash % M);
