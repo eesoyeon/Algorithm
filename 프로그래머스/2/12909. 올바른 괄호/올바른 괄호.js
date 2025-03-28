@@ -1,14 +1,18 @@
 function solution(s){
-    var answer = true;
-
+    let answer = '';
     let stack = [];
-    for(let char of s){
-        if(char==='(') stack.push(char);
-        else if(stack.length===0) answer = false;
-        else stack.pop();
+    
+ 
+    for(let char of s) {
+        if(char === '(') {
+            stack.push(char);
+        } else {
+            if(stack.length === 0) {
+                return false;
+            }
+            stack.pop();
+        }
     }
     
-    if(stack.length!=0) return false;
-    
-    return answer;
+    return stack.length === 0;
 }
